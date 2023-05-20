@@ -1,0 +1,14 @@
+.add-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 300px;
+  justify-content: space-between;
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+  label {
+    font-weight: bold;
+  }
+}

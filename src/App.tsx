@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import { useAppDispatch, useAppSelector } from './hooks/redux';
+import { productSlice } from './store/reducers/ProductSlice';
+import { fetchProducts } from './store/actions/ProductActions';
+import { Container } from 'react-bootstrap';
+import ProductList from './components/ProductList/ProductList';
+import ProductDetails from './components/ProductDetails/ProductDetails';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Container>
+          <Routes>
+            <Route path="/" element={<ProductList />} />
+            <Route path="/product/:id" element={<ProductDetails />} />
+          </Routes>
+        </Container>
+      </BrowserRouter>
     </div>
   );
 }

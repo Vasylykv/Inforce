@@ -1,0 +1,32 @@
+.comments-list {
+  list-style-type: none;
+}
+
+.product {
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.go-back {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.add-comment {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 150px;
+  top: 100px;
+  textarea {
+    resize: none;
+  }
+  button {
+    margin-top: 15px;
+  }
+}
+
+.comment-section {
+  margin-top: 20px;
+}
